@@ -1,42 +1,50 @@
 # weapon_give
 
-This function is an all-in-one function for giving the player any weapon in the zombies gamemode in t5 and t6
+Gives the player a weapon with optional Pack-a-Punch upgrade and sound control.
 
-| Function | Game | Engine/File | (t5) arguments | (t6) arguments |
-| -------- | ---- | ----------- | -------------- | -------------- |
-| weapon_give | t5/t6 | t5: `common\maps\_zombiemode_weapons.gsc`, t6: `maps\mp\zombies\_zm_weapons.gsc` | weaponName, isUpgrade | weaponName, isUpgrade, magicBox, noSound |
+## Description
 
-## Function
+This function is an all-in-one function for giving the player any weapon in the zombies gamemode. It handles weapon allocation, optional Pack-a-Punch upgrades (camo/attachments), and sound effects. Available in both T5 (Black Ops) and T6 (Black Ops II) versions.
 
-t5: `common\maps\_zombiemode_weapons::weapon_give( weaponName, isUpgrade )`
-t6: `maps\mp\zombies\_zm_weapons::weapon_give( weaponName, isUpgrade, magicBox, noSound )`
+## Signature
 
-## Arguments
+| Game | Function Call |
+|------|---------------|
+| t5 | `maps\_zombiemode_weapons::weapon_give(weaponName, isUpgrade)` |
+| t6 | `maps\mp\zombies\_zm_weapons::weapon_give(weaponName, isUpgrade, magicBox, noSound)` |
 
-### [t5/t6] weaponName
+## Parameters
 
-`string`: Reference [weapons list](#)
+| Parameter | Type | t5 | t6 | Description |
+|-----------|------|----|----|-------------|
+| weaponName | string | ✓ | ✓ | The weapon reference name (e.g., `"m1911_zm"`) |
+| isUpgrade | int | ✓ | ✓ | Set to `1` to apply Pack-a-Punch camo and attachments |
+| magicBox | int |  | ✓ | Set to `1` to play character voice line |
+| noSound | int |  | ✓ | Set to `1` to suppress the "purchase" sound effect |
 
-### [t5/t6] isUpgrade
+## Return Value
 
-`1`: Apply pack a punch camo/attachments
+| Game | Type | Description |
+|------|------|-------------|
+| t5 | void | No return value |
+| t6 | void | No return value |
 
-### [t6] magicBox
+## Examples
 
-`1`: Plays voice line
-
-### [t6] noSound
-
-`1`: Does NOT play "purchase" sound effect
-
-## Usage
-
-### t5
+### T5 (Black Ops)
 ```c
-player thread maps\_zombiemode_weapons::weapon_give( "m1911_zm", 0 );
+player thread maps\_zombiemode_weapons::weapon_give("m1911_zm", 0);
 ```
 
-### t6
+### T6 (Black Ops II)
 ```c
-player thread maps\mp\zombies\_zm_weapons::weapon_give( "m1911_zm", 0, 0, 0);
+player thread maps\mp\zombies\_zm_weapons::weapon_give("m1911_zm", 0, 0, 0);
 ```
+
+## Notes
+
+- This function should be called on a player entity
+- The `isUpgrade` parameter determines whether the weapon receives Pack-a-Punch visual treatment
+- In T6, `magicBox` voice lines are typically played when obtaining weapons from the Mystery Box
+- Use `noSound` when giving weapons silently (e.g., initial loadout, scripted sequences)
+- Both versions use `thread` to avoid blocking execution
