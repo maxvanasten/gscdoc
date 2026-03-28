@@ -10,7 +10,8 @@ To find out information about gsc, I've been using my own tools that are specifi
 - [gscp](https://github.com/maxvanasten/gscp): A parser for the gsc scripting language.
 - [gsclsp](https://github.com/maxvanasten/gsclsp): A language server implementation for gsc using `gscp`. (Provides syntax highlighting, inline hints, jump-to-definition etc.)
 
-## Common
+<details>
+<summary><h2>Common</h2></summary>
 
 `common_scripts\utility` is a library script that is included in both T5 and T6. These functions can be used in either game identically. It is highly recommended to just `#include common_scripts\utility;` at the top of basically any script you make so you dont have to explicitly write that path out every time you want to use a utility function.
 
@@ -54,8 +55,9 @@ To find out information about gsc, I've been using my own tools that are specifi
 | -------- | ----------- | ------------- |
 | `is_true(property)` | Check if property is not `undefined` and is `true` | [docs](./Common/boolean_check.md) |
 | `is_false(property` | Check if property is not `undefined` and is `false` | [docs](./Common/boolean_check.md) |
-
-## Zombies
+</details>
+<details>
+<summary><h2>Zombies</h2></summary>
 
 ### Common
 
@@ -64,3 +66,4 @@ To find out information about gsc, I've been using my own tools that are specifi
 | `weapon_give(weaponName, isUpgrade, magicBox, noSound)` | Give weapon to player | [docs](./Zombies/Common/weapon_give.md) |
 | `give_perk(perkName, bought)` | Give perk to player | [docs](./Zombies/Common/give_perk.md) |
 | `level.player_out_of_playable_area_monitor` | Enable/disable out of bounds check | [docs](./Zombies/Common/level.player_out_of_playable_area_monitor.md) |
+</details>
