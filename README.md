@@ -23,5 +23,6 @@ To find out information about gsc, I've been using my own tools that are specifi
 - Zombies
     - Common
         - [`weapon_give()`](./Zombies/Common/weapon_give.md): Give the player any weapon
+        - [`give_perk()`](./Zombies/Common/give_perk.md): Give the player any perk
         - [`level.player_out_of_playable_area_monitor`](./Zombies/Common/level.player_out_of_playable_area_monitor.md): Enable/Disable out of bounds check
     - Maps
