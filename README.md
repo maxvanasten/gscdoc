@@ -1,6 +1,14 @@
-# gsc-principles
+# gscdoc
 
-This is a repo that should function as a centralized place for instructions on how to use the functions defined by the original Call of Duty developers in order to create custom functionality around them.
+Welcome to `gscdoc`, my centralized repo for information about gsc scripting for older Call of Duty titles.
+
+## Tools used
+
+To find out information about gsc, I've been using my own tools that are specifically made for this purpose:
+
+- [gscex](https://github.com/maxvanasten/gscex): A tui tool for searching through the original decompiled t5/t6 scripts.
+- [gscp](https://github.com/maxvanasten/gscp): A parser for the gsc scripting language.
+- [gsclsp](https://github.com/maxvanasten/gsclsp): A language server implementation for gsc using `gscp`. (Provides syntax highlighting, inline hints, jump-to-definition etc.)
 
 # Index
 
