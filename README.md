@@ -16,7 +16,6 @@ To find out information about gsc, I've been using my own tools that are specifi
 <summary><h2>common_scripts\utility</h2></summary>
 
 `common_scripts\utility` is a library script that is included in both T5 and T6. These functions can be used in either game identically.
-
 <details>
 <summary><h3>Arrays</h3></summary>
 
@@ -40,9 +39,7 @@ To find out information about gsc, I've been using my own tools that are specifi
 - [`array_wait_any()`](): Wait for *any* entity in array to receive notification
 - [`array_notify()`](): Notify *every* entity in array
 - [`array_exclude()`](): Returns array minus elements that are also in exclusion list
-
 </details>
-
 <details>
 <summary><h3>Flags</h3></summary>
 
@@ -50,17 +47,13 @@ To find out information about gsc, I've been using my own tools that are specifi
 - [`flag_set()`](): Set flag on
 - [`flag_toggle()`](): Toggle flag on/off
 - [`flag_wait()`](): Wait for flag
-
 </details>
-
 <details>
 <summary><h3>Booleans</h3></summary>
 
 - [`is_true()`](): Check if property is not `undefined` and is `true`
 - [`is_false()`](): Check if property is not `undefined` and is `false`
-
 </details>
-
 </details>
 
 - Multiplayer
