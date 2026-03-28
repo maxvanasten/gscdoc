@@ -14,6 +14,7 @@ To find out information about gsc, I've been using my own tools that are specifi
 
 - Common
     - [Flags](./Common/flags.md): Initialize, set, toggle and wait for flags
+    - [`is_true()`/`is_false()`](./Common/boolean_check.md): Safely assert the value of a boolean
 - Multiplayer
     - Common
     - Maps
