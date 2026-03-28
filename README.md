@@ -2,7 +2,7 @@
 
 Welcome to `gscdoc`, my centralized repo for information about gsc scripting for older Call of Duty titles.
 
-## Tools used
+### Tools used
 
 To find out information about gsc, I've been using my own tools that are specifically made for this purpose:
 
@@ -10,14 +10,11 @@ To find out information about gsc, I've been using my own tools that are specifi
 - [gscp](https://github.com/maxvanasten/gscp): A parser for the gsc scripting language.
 - [gsclsp](https://github.com/maxvanasten/gsclsp): A language server implementation for gsc using `gscp`. (Provides syntax highlighting, inline hints, jump-to-definition etc.)
 
-# Index
-
-<details>
-<summary><h2>Common utility functions</h2></summary>
+## Common
 
 `common_scripts\utility` is a library script that is included in both T5 and T6. These functions can be used in either game identically. It is highly recommended to just `#include common_scripts\utility;` at the top of basically any script you make so you dont have to explicitly write that path out every time you want to use a utility function.
-<details>
-<summary><h3>Arrays</h3></summary>
+
+### Arrays
 
 | Function | Description | Documentation |
 | -------- | ----------- | ------------- |
@@ -41,36 +38,29 @@ To find out information about gsc, I've been using my own tools that are specifi
 | `array_wait_any(arr, event, timeout)` | Wait for *any* item in array to receive notification | |
 | `array_notify(arr, event)` | Notify every item in array of event | |
 | `array_exclude(arr, arrExclude)` | Returns array minus items that are also present in arrExclude | |
-</details>
-<details>
-<summary><h3>Flags</h3></summary>
+
+### Flags
 
 | Function | Description | Documentation |
 | -------- | ----------- | ------------- |
-| `flag_init(flagName, value)` | Initializes flag with optional value | |
-| `flag_set(flagName)` | Set flag on | |
-| `flag_toggle(flagName)` | Toggle flag | |
-| `flag_wait(flagName)` | Wait for flag | |
-</details>
-<details>
-<summary><h3>Booleans</h3></summary>
+| `flag_init(flagName, value)` | Initializes flag with optional value | [docs](./Common/flags.md) |
+| `flag_set(flagName)` | Set flag on | [docs](./Common/flags.md) |
+| `flag_toggle(flagName)` | Toggle flag | [docs](./Common/flags.md) |
+| `flag_wait(flagName)` | Wait for flag | [docs](./Common/flags.md) |
+
+### Booleans
 
 | Function | Description | Documentation |
 | -------- | ----------- | ------------- |
-| `is_true(property)` | Check if property is not `undefined` and is `true` | |
-| `is_false(property` | Check if property is not `undefined` and is `false` | |
-</details>
-</details>
+| `is_true(property)` | Check if property is not `undefined` and is `true` | [docs](./Common/boolean_check.md) |
+| `is_false(property` | Check if property is not `undefined` and is `false` | [docs](./Common/boolean_check.md) |
 
-<details>
-<summary><h2>Zombies specific functions</h2></summary>
-<details>
-<summary><h3>Common (every map)</h3></summary>
+## Zombies
 
-| Function | Description | Documentation |
+### Common
+
+| Function/Property | Description | Documentation |
 | -------- | ----------- | ------------- |
-| `weapon_give(weaponName, isUpgrade, magicBox, noSound)` | Give weapon to player | |
-| `give_perk(perkName, bought)` | Give perk to player | |
-| `level.player_out_of_playable_area_monitor` | Enable/disable out of bounds check
-</details>
-</details>
+| `weapon_give(weaponName, isUpgrade, magicBox, noSound)` | Give weapon to player | [docs](./Zombies/Common/weapon_give.md) |
+| `give_perk(perkName, bought)` | Give perk to player | [docs](./Zombies/Common/give_perk.md) |
+| `level.player_out_of_playable_area_monitor` | Enable/disable out of bounds check | [docs](./Zombies/Common/level.player_out_of_playable_area_monitor.md) |
