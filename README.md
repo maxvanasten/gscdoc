@@ -5,6 +5,7 @@ This is a repo that should function as a centralized place for instructions on h
 # Index
 
 - Common
+    - [Flags](./Common/flags.md): Initialize, set, toggle and wait for flags
 - Multiplayer
     - Common
     - Maps
@@ -13,6 +14,6 @@ This is a repo that should function as a centralized place for instructions on h
     - Maps
 - Zombies
     - Common
-        - [weapon_give()](./Zombies/Common/weapon_give.md): Give the player any weapon
-        - [level.player_out_of_playable_area_monitor](./Zombies/Common/level.player_out_of_playable_area_monitor.md): Enable/Disable out of bounds check
+        - [`weapon_give()`](./Zombies/Common/weapon_give.md): Give the player any weapon
+        - [`level.player_out_of_playable_area_monitor`](./Zombies/Common/level.player_out_of_playable_area_monitor.md): Enable/Disable out of bounds check
     - Maps
