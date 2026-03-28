@@ -1,4 +1,4 @@
-# weapon_give
+# weapon_give()
 
 Gives the player a weapon with optional Pack-a-Punch upgrade and sound control.
 
