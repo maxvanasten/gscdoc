@@ -13,12 +13,12 @@ To find out information about gsc, I've been using my own tools that are specifi
 # Index
 
 <details>
-<summary>common_scripts\utility</summary>
+<summary>##common_scripts\utility</summary>
 
 `common_scripts\utility` is a library script that is included in both T5 and T6. These functions can be used in either game identically.
 
 <details>
-<summary>Arrays</summary>
+<summary>###Arrays</summary>
 - [`array()`](): Create an array from up to 26 elements
 - [`add_to_array()`](): Add item to array
 - [`array_remove()`](): Remove item from array
@@ -42,7 +42,7 @@ To find out information about gsc, I've been using my own tools that are specifi
 </details>
 
 <details>
-<summary>Flags</summary>
+<summary>###Flags</summary>
 - [`flag_init()`](): Initialize flag
 - [`flag_set()`](): Set flag on
 - [`flag_toggle()`](): Toggle flag on/off
@@ -50,7 +50,7 @@ To find out information about gsc, I've been using my own tools that are specifi
 </details>
 
 <details>
-<summary>Booleans</summary>
+<summary>###Booleans</summary>
 - [`is_true()`](): Check if property is not `undefined` and is `true`
 - [`is_false()`](): Check if property is not `undefined` and is `false`
 </details>
